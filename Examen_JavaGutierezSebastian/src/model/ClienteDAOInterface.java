@@ -13,6 +13,6 @@ public interface ClienteDAOInterface {
     List<Cliente> listarTodos();
     Cliente buscarPorId(Integer id);
     List<Cliente> buscarPorNombre(String nombre);
-    void actualizarEstudiante(Cliente cliente);
-    void eliminarEstudiante(Integer id);
+    void actualizarCliente(Cliente cliente);
+    void eliminarCliente(Integer id);
 }

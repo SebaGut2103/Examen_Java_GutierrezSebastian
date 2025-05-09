@@ -24,9 +24,9 @@ public class ClienteDAO implements ClienteDAOInterface{
         try(PreparedStatement pstmt = conn.prepareStatement(sql)) {
             pstmt.setString(1, cliente.getNombre());
             pstmt.setString(2, cliente.getRepresante());
-            pstmt.setString(2, cliente.getDireccion());
-            pstmt.setString(2, cliente.getTelefono());
-            pstmt.setString(2, cliente.getSector());
+            pstmt.setString(3, cliente.getDireccion());
+            pstmt.setString(4, cliente.getTelefono());
+            pstmt.setString(5, cliente.getSector());
         } catch (SQLException e) {
             System.err.println("Error al agregar el cliente: " + cliente + "\n" + e.getMessage() );
         }
@@ -96,12 +96,12 @@ public class ClienteDAO implements ClienteDAOInterface{
     }
 
     @Override
-    public void actualizarEstudiante(Cliente cliente) {
+    public void actualizarCliente(Cliente cliente) {
 
     }
 
     @Override
-    public void eliminarEstudiante(Integer id) {
+    public void eliminarCliente(Integer id) {
 
     }
 }
